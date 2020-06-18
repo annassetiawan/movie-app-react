@@ -1,0 +1,119 @@
+.container {
+    position: fixed;
+    width: 250px;
+    left: 0px;
+    top: 0px;
+    background: #333646;
+    z-index: 11;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  
+  .menu-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #eaeaea;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+  
+  .menu-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+  
+    &::after {
+      position: absolute;
+      content: "";
+      top: 120%;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #ffc25c;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+    }
+  
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  
+  .menu-text {
+    margin-left: 12px;
+  
+    font-weight: normal;
+    font-size: 20px;
+    color: #eaeaea;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  hr {
+    width: 55%;
+    margin-left: 0;
+    border: 2px solid #ffc25c;
+    margin-bottom: 33px;
+  }
+  
+  .menu1 {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .menu1 ul {
+    padding: 0;
+  }
+  
+  .menu1 ul li {
+    margin-bottom: 30px;
+  }
+  
+  .menu1 ul li p {
+    pointer-events: none;
+  }
+  
+  .menu1 ul li img {
+    width: 30px;
+    color: #eaeaea;
+    pointer-events: none;
+  }
+  
+  .active > .menu-text {
+    color: #ffc25c;
+    font-weight: 700;
+  }
+  
+  .active > .home {
+    content: url(../assets/homehover.svg);
+  }
+  .active > .genre {
+    content: url(../assets/genreshover.svg);
+  }
+  .active > .trending {
+    content: url(../assets/trendinghover.svg);
+  }
+  .active > .popular {
+    content: url(../assets/popularhover.svg);
+  }
+  .active > .toprated {
+    content: url(../assets/topratedhover.svg);
+  }

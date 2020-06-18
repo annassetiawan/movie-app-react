@@ -1,0 +1,37 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #3a3e4f;
+    width: 100%;
+  }
+  
+  .icon {
+    position: relative;
+    left: 60px;
+    top: 10px;
+    z-index: 12;
+  }
+  
+  input[type="text"] {
+    position: relative;
+    align-items: center;
+    z-index: 9;
+    margin: 10px;
+    background: #656a89;
+    border-radius: 25px;
+    border: 0;
+    height: 40px;
+    color: #eaeaea;
+    padding-left: 60px;
+    width: 250px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  ::placeholder {
+    color: #eaeaea;
+    font-family: "Poppins", sans-serif;
+    opacity: 0.5;
+  }

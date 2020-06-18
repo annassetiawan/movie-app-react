@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import './components/navbar.scss';
+@import './components/menu.scss';
+@import './components/genre.scss';
+@import './components/home.scss';
+@import './components/moviedetails.scss';
+
+* {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+}
+
+html,
+body {
+  background: #252734;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 30px;
+  z-index: 1;
+  top: 80px;
+  justify-items: center;
+  color: #eaeaea;
+  max-width: 100%;
+  padding: 20px;
+  margin-left: 250px;
+  justify-content: center;
+}
+
+.movies-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #50546d;
+  border-radius: 20px;
+  width: 160px;
+  height: 285px;
+
+  img {
+    display: flex;
+    border-radius: 20px;
+    width: 100%;
+    height: 220px;
+  }
+
+  .title-movies {
+    margin: 10px 5px 5px 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .release-movies {
+    margin: 0 0 0 5px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+  }
+}
+
+
+
+
+
+
