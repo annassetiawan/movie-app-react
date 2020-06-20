@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
 import bxSearch from "@iconify/icons-bx/bx-search";
-import MovieSearch from './MovieSearch'
 
 class Navbar extends Component {
   render() {
@@ -13,7 +12,7 @@ class Navbar extends Component {
             icon={bxSearch}
             style={{ color: "#eaeaea", fontSize: "30px" }}
           />
-          <MovieSearch/>
+          <input type="text" placeholder="Search For Movies" />
         </div>
       </div>
     );
