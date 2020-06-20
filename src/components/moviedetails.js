@@ -122,9 +122,6 @@ class MovieDetails extends Component {
     const castList = cast.map((cast) => {
       
       return (
-
-        
-
         <div className="cast-details" key={cast.id}>
           <div className="profile-image">
             <img
@@ -145,7 +142,6 @@ class MovieDetails extends Component {
     const details = this.state.id ? (
       <div className="details">
         <div className="backdrop">
-          
           <img
            onError={(e)=>{e.target.src=defImage}}
             src={`https://image.tmdb.org/t/p/w1280/${this.state.id.backdrop_path}`}
@@ -203,6 +199,8 @@ class MovieDetails extends Component {
     ) : (
       <div className="details">Loading post...</div>
     );
+
+    
 
     return <div className="content-details">
       <div className="button-back">
