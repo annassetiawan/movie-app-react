@@ -22,6 +22,20 @@ body {
   height: 100%;
 }
 
+body::-webkit-scrollbar{
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track{
+  
+  background: #16171f
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #50546d
+  
+}
+
 .content {
   position: relative;
   display: grid;

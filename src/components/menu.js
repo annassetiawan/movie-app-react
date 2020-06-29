@@ -5,6 +5,7 @@ import logo from "../assets/logo.svg";
 import toprated from "../assets/toprated.svg";
 import trending from "../assets/trending.svg";
 import popular from "../assets/popular.svg";
+import search from "../assets/search.svg";
 import { NavLink,withRouter } from "react-router-dom";
 
 
@@ -13,7 +14,7 @@ class Menu extends Component {
     
     const {location} = this.props;
 
-  if(location.pathname.startsWith('/popular/') || location.pathname.startsWith('/trending/') || location.pathname.startsWith('/toprated/') || location.pathname.startsWith('/genres/genrelist/')) {
+  if(location.pathname.startsWith('/popular/') || location.pathname.startsWith('/trending/') || location.pathname.startsWith('/toprated/') || location.pathname.startsWith('/genrelist/') || location.pathname.startsWith('/search/')) {
     return null;
   } else {
     return (
@@ -57,6 +58,13 @@ class Menu extends Component {
                   <p className="menu-text">Popular</p>
                 </NavLink>
               </li>
+              <li>
+                <NavLink className="menu-link" exact to="/search">
+                  <img className='search' src={search} alt="search" />
+                  <p className="menu-text">Search</p>
+                </NavLink>
+              </li>
+             
             </ul>
           </div>
         </div>

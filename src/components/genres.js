@@ -25,7 +25,7 @@ class Genres extends Component {
       datas.map((data) => {
         return (
           <div className="genre-menu" key={data.id}>
-            <Link to={"/genres/" + data.id}>
+            <Link to={"/genres/genrelist/" + data.id}>
               <div className="movies-card-genre">
                 <p className="title-movies">{data.name}</p>
               </div>

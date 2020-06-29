@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import MovieCards from "./MovieCards";
 
 class Trending extends Component {
   state = {
     datas: [],
+    param:'trending'
   };
 
   componentDidMount() {
@@ -20,34 +21,11 @@ class Trending extends Component {
   }
 
   render() {
-    const { datas } = this.state;
-    const dataList = datas.length ? (
-      datas.map((data) => {
-        return (
-          <div className="trending-menu" key={data.id}>
-            <Link to={"/trending/" + data.id}>
-              <div className="movies-card">
-                <img
-                  src={"https://image.tmdb.org/t/p/w500/" + data.poster_path}
-                  alt="pict"
-                />
-                <p className="title-movies">
-                  {data.title}
-                  {data.name}{" "}
-                </p>
-                <p className="release-movies">
-                  {data.release_date} {data.first_air_date}
-                </p>
-              </div>
-            </Link>
-          </div>
-        );
-      })
-    ) : (
-      <div className="center">Loading Data</div>
-    );
-
-    return <div className="content ">{dataList}</div>;
+    return (
+      
+      <MovieCards datas={this.state.datas} param={this.state.param} />
+    
+  );
   }
 }
 
